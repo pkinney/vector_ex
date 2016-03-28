@@ -15,7 +15,7 @@ end
 
 ## Usage
 
-**[Full Documentation](https://pkinney.github.io/vector_ex/Vector.html)**
+**[Full Documentation](https://hexdocs.pm/vector/Vector.html)**
 
 The `Vector` module contains several functions that take one or more vectors.
 Each vector can be a 2- or 3-element tuple.  It is possible to mix two- and
@@ -29,7 +29,7 @@ Vector.norm({3, -6, 6}) #=> 9
 Vector.unit({2, -1}) #=> {0.894, -0.447}
 Vector.add({2, 0, -1}, {0, 3, 3}) #=> {2, 3, 1}
 Vector.subtract({2, 0, -1}, {1, 3}) #=> {1, -3, 1}
-Vector.component({2, 3, -2}, :y) #=> 3 
+Vector.component({2, 3, -2}, :y) #=> 3
 ```
 
 ## Tests
