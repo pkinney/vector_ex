@@ -40,7 +40,7 @@ defmodule Vector.Mixfile do
       maintainers: ["Powell Kinney"],
       licenses: ["MIT"],
       links: %{ "GitHub" => "https://github.com/pkinney/vector_ex",
-                "Docs" => "https://pkinney.github.io/vector_ex/Vector.html"}
+                "Docs" => "https://hexdocs.pm/vector/Vector.html"}
     ]
   end
 end
