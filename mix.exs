@@ -3,7 +3,7 @@ defmodule Vector.Mixfile do
 
   def project do
     [app: :vector,
-     version: "0.1.0",
+     version: "0.2.0",
      elixir: "~> 1.2",
      description: description,
      package: package,
@@ -39,7 +39,8 @@ defmodule Vector.Mixfile do
       files: ["lib", "mix.exs", "README*"],
       maintainers: ["Powell Kinney"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/pkinney/vector_ex"}
+      links: %{ "GitHub" => "https://github.com/pkinney/vector_ex",
+                "Docs" => "https://pkinney.github.io/vector_ex/Vector.html"}
     ]
   end
 end

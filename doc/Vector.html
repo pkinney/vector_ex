@@ -108,6 +108,24 @@ true</code></pre>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#basis/1">basis(atom)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the basis vector for the given axis</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#component/2">component(arg, atom)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the scalar component for the axis given</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#cross/2">cross(arg1, arg2)</a>
   </div>
   
@@ -254,6 +272,50 @@ iex&gt; Vector.add({-2, 0, 5}, {0, 0, 0})
 {-2, 0, 5}
 iex&gt; Vector.add({2, 1, -2}, Vector.reverse({2, 1, -2}))
 {0, 0, 0}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="basis/1">
+  <div class="detail-header">
+    <a href="#basis/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">basis(atom)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the basis vector for the given axis</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Vector.basis(:x)
+{1, 0, 0}
+iex&gt; Vector.basis(:y)
+{0, 1, 0}
+iex&gt; Vector.component(Vector.basis(:y), :y)
+1</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="component/2">
+  <div class="detail-header">
+    <a href="#component/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">component(arg, atom)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the scalar component for the axis given</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Vector.component({3, -4}, :y)
+-4
+iex&gt; Vector.component({-6, 0, 8}, :z)
+8
+iex&gt; Vector.component({1, -2}, :z)
+0
+iex&gt; Vector.component(Vector.basis(:x), :z)
+0</code></pre>
 
   </section>
 </div>
