@@ -1,14 +1,12 @@
-defmodule VectorIdentities3Test do
+defmodule VectorIdentitiesTest do
   use ExUnit.Case, async: true
 
   import Vector
   doctest Vector
 
-  @values [-2, -1, 0, 1, 42]
+  @values [-2, 0, 1, 42]
   @vectors (for x <- @values, y <- @values, do: {x, y}) ++ (for x <- @values, y <- @values, z <- @values, do: {x, y, z})
-  @tolerance 0.001
-
-  IO.puts length(@vectors)
+  @tolerance 0.00001
 
   defp areEqual(r1, r2) when is_tuple(r1) and is_tuple(r2), do: equal(r1, r2, @tolerance)
   defp areEqual(r1, r2), do: abs(r1-r2) <= @tolerance

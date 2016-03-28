@@ -235,4 +235,42 @@ defmodule Vector do
   def equal(a, b, tolerance \\ 0.0) do
     norm_squared(subtract(a, b)) <= tolerance * tolerance
   end
+
+  @doc ~S"""
+  Returns the scalar component for the axis given
+
+  ## Examples
+
+      iex> Vector.component({3, -4}, :y)
+      -4
+      iex> Vector.component({-6, 0, 8}, :z)
+      8
+      iex> Vector.component({1, -2}, :z)
+      0
+      iex> Vector.component(Vector.basis(:x), :z)
+      0
+  """
+  def component({x, _}, :x), do: x
+  def component({_, y}, :y), do: y
+  def component({_, _}, :z), do: 0
+  def component({x, _, _}, :x), do: x
+  def component({_, y, _}, :y), do: y
+  def component({_, _, z}, :z), do: z
+
+
+  @doc ~S"""
+  Returns the basis vector for the given axis
+
+  ## Examples
+
+      iex> Vector.basis(:x)
+      {1, 0, 0}
+      iex> Vector.basis(:y)
+      {0, 1, 0}
+      iex> Vector.component(Vector.basis(:y), :y)
+      1
+  """
+  def basis(:x), do: {1, 0, 0}
+  def basis(:y), do: {0, 1, 0}
+  def basis(:z), do: {0, 0, 1}
 end
