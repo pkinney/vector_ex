@@ -15,7 +15,7 @@ end
 
 ## Usage
 
-Full Documentation is available at `https://pkinney.github.io/vector_ex/Vector.html`
+Full Documentation is available at [https://pkinney.github.io/vector_ex/Vector.html].
 
 The `Vector` module contains several functions that take one or more vectors.
 Each vector can be a 2- or 3-element tuple.  It is possible to mix two- and
