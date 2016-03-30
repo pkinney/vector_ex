@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.4">
-    <title>Vector – vector v0.2.1</title>
+    <title>Vector – vector v0.2.2</title>
     <link rel="stylesheet" href="dist/app-1e374caa3d.css" />
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -27,7 +27,7 @@
         vector
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.2.1
+        v0.2.2
       </h2>
     </div>
     
@@ -59,7 +59,7 @@
 
 
       <h1>
-        <small class="visible-xs">vector v0.2.1</small>
+        <small class="visible-xs">vector v0.2.2</small>
         Vector
         
         
@@ -229,7 +229,20 @@ coordinate <code class="inline">start</code> along <code class="inline">vector</
     <a href="#unit/1">unit(v)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the unit vector parallel ot the given vector</p>
+    <div class="summary-synopsis"><p>Returns the unit vector parallel ot the given vector.
+This will raise an <code class="inline">ArithmeticError</code> if a zero-magnitude vector is given.
+Use <code class="inline">unit_safe</code> if there is a chance that a zero-magnitude vector
+will be sent</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unit_safe/1">unit_safe(v)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the unit vector parallel ot the given vector, but will handle
+the vectors <code class="inline">{0, 0}</code>  and <code class="inline">{0, 0, 0}</code> by returning the same vector</p>
 </div>
   
 </div>
@@ -561,14 +574,41 @@ iex&gt; Vector.subtract({-2, 0, 5}, {-3, 1, 2})
   </div>
   
   <section class="docstring">
-    <p>Returns the unit vector parallel ot the given vector</p>
+    <p>Returns the unit vector parallel ot the given vector.
+This will raise an <code class="inline">ArithmeticError</code> if a zero-magnitude vector is given.
+Use <code class="inline">unit_safe</code> if there is a chance that a zero-magnitude vector
+will be sent.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Vector.unit({3, 4})
 {0.6, 0.8}
 iex&gt; Vector.unit({8, 0, 6})
 {0.8, 0.0, 0.6}
 iex&gt; Vector.unit({-2, 0, 0})
-{-1.0, 0.0, 0.0}</code></pre>
+{-1.0, 0.0, 0.0}
+iex&gt; Vector.unit({0, 0, 0})
+** (ArithmeticError) bad argument in arithmetic expression</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="unit_safe/1">
+  <div class="detail-header">
+    <a href="#unit_safe/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">unit_safe(v)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the unit vector parallel ot the given vector, but will handle
+the vectors <code class="inline">{0, 0}</code>  and <code class="inline">{0, 0, 0}</code> by returning the same vector</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Vector.unit_safe({3, 4})
+{0.6, 0.8}
+iex&gt; Vector.unit_safe({0, 0})
+{0, 0}
+iex&gt; Vector.unit_safe({0, 0, 0})
+{0, 0, 0}</code></pre>
 
   </section>
 </div>
