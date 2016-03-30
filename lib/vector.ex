@@ -112,7 +112,10 @@ defmodule Vector do
   end
 
   @doc ~S"""
-  Returns the unit vector parallel ot the given vector
+  Returns the unit vector parallel ot the given vector.
+  This will raise an `ArithmeticError` if a zero-magnitude vector is given.
+  Use `unit_safe` if there is a chance that a zero-magnitude vector
+  will be sent.
 
   ## Examples
 
@@ -122,11 +125,30 @@ defmodule Vector do
       {0.8, 0.0, 0.6}
       iex> Vector.unit({-2, 0, 0})
       {-1.0, 0.0, 0.0}
+      iex> Vector.unit({0, 0, 0})
+      ** (ArithmeticError) bad argument in arithmetic expression
   """
   def unit({x, 0, 0}), do: {x / abs(x), 0.0, 0.0}
   def unit({0, y, 0}), do: {0.0, y / abs(y), 0.0}
   def unit({0, 0, z}), do: {0.0, 0.0, z / abs(z)}
   def unit(v), do: divide(v, norm(v))
+
+  @doc ~S"""
+  Returns the unit vector parallel ot the given vector, but will handle
+  the vectors `{0, 0}`  and `{0, 0, 0}` by returning the same vector
+
+  ## Examples
+
+      iex> Vector.unit_safe({3, 4})
+      {0.6, 0.8}
+      iex> Vector.unit_safe({0, 0})
+      {0, 0}
+      iex> Vector.unit_safe({0, 0, 0})
+      {0, 0, 0}
+  """
+  def unit_safe({0, 0}), do: {0, 0}
+  def unit_safe({0, 0, 0}), do: {0, 0, 0}
+  def unit_safe(v), do: unit(v)
 
   @doc ~S"""
   Reverses a vector
