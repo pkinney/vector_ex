@@ -91,6 +91,25 @@ true</code></pre>
             Summary
           </h1>
           
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:location/0">location()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:vector/0">vector()</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-functions summary">
@@ -162,7 +181,7 @@ true</code></pre>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#equal/3">equal(a, b, tolerance \\ 0.0)</a>
+    <a href="#equal?/3">equal?(a, b, tolerance \\ 0.0)</a>
   </div>
   
     <div class="summary-synopsis"><p>Compares two vectors for euqality, with an optional tolerance</p>
@@ -258,6 +277,30 @@ the vectors <code class="inline">{0, 0}</code>  and <code class="inline">{0, 0, 
       
 
       
+        <section id="types" class="types details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div id="t:location/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:location/0">location</a> ::
+  {number, number} |
+  {number, number, number}</code></pre>
+  
+</div>
+<div id="t:vector/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:vector/0">vector</a> ::
+  {number, number} |
+  {number, number, number}</code></pre>
+  
+</div>
+
+          </div>
+        </section>
+      
 
       
         <section id="functions" class="details-list">
@@ -275,6 +318,15 @@ the vectors <code class="inline">{0, 0}</code>  and <code class="inline">{0, 0, 
     <span class="signature">add(arg1, arg2)</span>
       
   </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">add(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Adds two vectors</p>
@@ -297,6 +349,15 @@ iex&gt; Vector.add({2, 1, -2}, Vector.reverse({2, 1, -2}))
       
   </div>
   
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">basis(atom) :: <a href="#t:vector/0">vector</a></code></pre>
+        
+      </div>
+    </div>
+  
   <section class="docstring">
     <p>Returns the basis vector for the given axis</p>
 <h2>Examples</h2>
@@ -317,6 +378,15 @@ iex&gt; Vector.component(Vector.basis(:y), :y)
     <span class="signature">component(arg, atom)</span>
       
   </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">component(<a href="#t:vector/0">vector</a>, atom) :: number</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the scalar component for the axis given</p>
@@ -341,6 +411,15 @@ iex&gt; Vector.component(Vector.basis(:x), :z)
       
   </div>
   
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">cross(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+        
+      </div>
+    </div>
+  
   <section class="docstring">
     <p>Returns the cross product of two vectors <em>A</em>⨯<em>B</em></p>
 <h2>Examples</h2>
@@ -361,6 +440,15 @@ iex&gt; Vector.cross({3, -3, 1}, {4, 9, 2})
     <span class="signature">cross_norm(arg1, arg2)</span>
       
   </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">cross_norm(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: number</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the norm (magnitude) of the cross product of two vectors <em>A</em>⨯<em>B</em></p>
@@ -385,6 +473,15 @@ iex&gt; Float.floor(:math.pow(Vector.cross_norm({2, 2, -1}, {1, 4, 2}), 2))
       
   </div>
   
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">divide(<a href="#t:vector/0">vector</a>, number) :: <a href="#t:vector/0">vector</a></code></pre>
+        
+      </div>
+    </div>
+  
   <section class="docstring">
     <p>Divide a vector by scalar value <code class="inline">s</code></p>
 <h2>Examples</h2>
@@ -404,6 +501,15 @@ iex&gt; Vector.divide({-2, 0, 5}, -2)
       
   </div>
   
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">dot(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: number</code></pre>
+        
+      </div>
+    </div>
+  
   <section class="docstring">
     <p>Returns the dot product of two vectors <em>A</em>⨯<em>B</em></p>
 <h2>Examples</h2>
@@ -416,14 +522,23 @@ iex&gt; Vector.dot({2, 0, -1}, {0, 3, 3})
 
   </section>
 </div>
-<div class="detail" id="equal/3">
+<div class="detail" id="equal?/3">
   <div class="detail-header">
-    <a href="#equal/3" class="detail-link" title="Link to this function">
+    <a href="#equal?/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">equal(a, b, tolerance \\ 0.0)</span>
+    <span class="signature">equal?(a, b, tolerance \\ 0.0)</span>
       
   </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">equal?(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>, number) :: boolean</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Compares two vectors for euqality, with an optional tolerance</p>
@@ -448,6 +563,15 @@ true</code></pre>
       
   </div>
   
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">multiply(<a href="#t:vector/0">vector</a>, number) :: <a href="#t:vector/0">vector</a></code></pre>
+        
+      </div>
+    </div>
+  
   <section class="docstring">
     <p>Multiply a vector by scalar value <code class="inline">s</code></p>
 <h2>Examples</h2>
@@ -466,6 +590,15 @@ iex&gt; Vector.multiply({-2, 0, 5}, -2)
     <span class="signature">norm(arg)</span>
       
   </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">norm(<a href="#t:vector/0">vector</a>) :: number</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the norm (magnitude) of a vector</p>
@@ -487,6 +620,15 @@ iex&gt; Vector.norm({0, -2, 0})
     <span class="signature">norm_squared(arg)</span>
       
   </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">norm_squared(<a href="#t:vector/0">vector</a>) :: number</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the square of the norm norm (magnitude) of a vector</p>
@@ -511,6 +653,15 @@ iex&gt; Vector.norm_squared({-2, 3, 1})
       
   </div>
   
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">project(<a href="#t:vector/0">vector</a>, <a href="#t:location/0">location</a>, number) :: <a href="#t:location/0">location</a></code></pre>
+        
+      </div>
+    </div>
+  
   <section class="docstring">
     <p>Returns a new coordinate by projecting a given length <code class="inline">distance</code> from
 coordinate <code class="inline">start</code> along <code class="inline">vector</code></p>
@@ -533,6 +684,15 @@ iex&gt; Vector.project({-2, 1, 3}, {0, 0, 0}, 2.5) |&gt; Vector.norm()
       
   </div>
   
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">reverse(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+        
+      </div>
+    </div>
+  
   <section class="docstring">
     <p>Reverses a vector</p>
 <h2>Examples</h2>
@@ -554,6 +714,15 @@ iex&gt; Vector.cross_norm({-2, 3, 5}, Vector.reverse({-2, 3, 5}))
       
   </div>
   
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">subtract(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+        
+      </div>
+    </div>
+  
   <section class="docstring">
     <p>Subtract vector <em>B</em> from vector <em>A</em>.  Equivalent to <code class="inline">Vector.add(A, Vector.revers(B))</code></p>
 <h2>Examples</h2>
@@ -572,6 +741,15 @@ iex&gt; Vector.subtract({-2, 0, 5}, {-3, 1, 2})
     <span class="signature">unit(v)</span>
       
   </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">unit(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the unit vector parallel ot the given vector.
@@ -598,6 +776,15 @@ iex&gt; Vector.unit({0, 0, 0})
     <span class="signature">unit_safe(v)</span>
       
   </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">unit_safe(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the unit vector parallel ot the given vector, but will handle
