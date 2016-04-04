@@ -9,7 +9,7 @@ defmodule Vector do
       ...> a = {2, 3, 1}
       ...> b = {1, 4, -2}
       ...> c = {-1, 2, 1}
-      ...> Vector.equal(
+      ...> Vector.equal?(
       ...>   Vector.cross(Vector.cross(a, b), c),
       ...>   Vector.subtract(Vector.multiply(b, Vector.dot(a, c)), Vector.multiply(a, Vector.dot(b, c))))
       true
@@ -261,13 +261,13 @@ defmodule Vector do
 
   ## Examples
 
-      iex> Vector.equal({3, -4}, {3, -4})
+      iex> Vector.equal?({3, -4}, {3, -4})
       true
-      iex> Vector.equal({3, -4}, {3.0001, -3.9999})
+      iex> Vector.equal?({3, -4}, {3.0001, -3.9999})
       false
-      iex> Vector.equal({3, -4}, {3.0001, -3.9999}, 0.001)
+      iex> Vector.equal?({3, -4}, {3.0001, -3.9999}, 0.001)
       true
-      iex> Vector.equal({3, -4, 1}, {3.0001, -3.9999, 1.0}, 0.001)
+      iex> Vector.equal?({3, -4, 1}, {3.0001, -3.9999, 1.0}, 0.001)
       true
   """
   @spec equal?(vector, vector, number) :: boolean

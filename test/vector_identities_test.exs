@@ -7,7 +7,7 @@ defmodule VectorIdentitiesTest do
   @vectors (for x <- @values, y <- @values, do: {x, y}) ++ (for x <- @values, y <- @values, z <- @values, do: {x, y, z})
   @tolerance 0.00001
 
-  defp areEqual(r1, r2) when is_tuple(r1) and is_tuple(r2), do: equal(r1, r2, @tolerance)
+  defp areEqual(r1, r2) when is_tuple(r1) and is_tuple(r2), do: equal?(r1, r2, @tolerance)
   defp areEqual(r1, r2), do: abs(r1-r2) <= @tolerance
 
   def test_identity_2(left, right) do
