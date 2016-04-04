@@ -3,7 +3,7 @@ defmodule Vector.Mixfile do
 
   def project do
     [app: :vector,
-     version: "0.2.2",
+     version: "0.3.0",
      elixir: "~> 1.2",
      description: description,
      package: package,
