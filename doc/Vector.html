@@ -1,24 +1,27 @@
     <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
-    <title>Vector – vector v0.3.0</title>
-    <link rel="stylesheet" href="dist/app-1e374caa3d.css" />
-    <script src="dist/sidebar_items.js"></script>
+    <meta name="generator" content="ExDoc v0.16.3">
+    <title>Vector – vector v1.0.0</title>
+    <link rel="stylesheet" href="dist/app-5b9e160cec.css" />
+    
+      <link rel="canonical" href="https://hexdocs.pm/vector/Vector.html" />
+    
+    <script src="dist/sidebar_items-85cf0fa78e.js"></script>
+    
   </head>
   <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
     <div class="main">
 <button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="api-reference.html" class="sidebar-projectLink">
@@ -27,16 +30,18 @@
         vector
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.3.0
+        v1.0.0
       </h2>
     </div>
     
   </a>
 
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
-  </div>
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="search" aria-label="Search" autocomplete="off" />
+  </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
@@ -48,28 +53,33 @@
     
 
     
-  </ul>
 
+    
+  </ul>
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
-        <small class="visible-xs">vector v0.3.0</small>
+        <small class="visible-xs">vector v1.0.0</small>
         Vector
-        
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>A library of two- and three-dimensional vector operations.  All vectors
 are represented as tuples with either two or three elements.</p>
-<h2>Examples</h2>
+<h2 id="module-examples" class="section-heading">
+  <a href="#module-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; # Vector Tripple Product Identity
 ...&gt; a = {2, 3, 1}
 ...&gt; b = {1, 4, -2}
@@ -86,7 +96,8 @@ true</code></pre>
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Summary
           </h1>
@@ -249,7 +260,7 @@ coordinate <code class="inline">start</code> along <code class="inline">vector</
   </div>
   
     <div class="summary-synopsis"><p>Returns the unit vector parallel ot the given vector.
-This will raise an <code class="inline">ArithmeticError</code> if a zero-magnitude vector is given.
+This will raise an <a href="https://hexdocs.pm/elixir/ArithmeticError.html"><code class="inline">ArithmeticError</code></a> if a zero-magnitude vector is given.
 Use <code class="inline">unit_safe</code> if there is a chance that a zero-magnitude vector
 will be sent</p>
 </div>
@@ -271,31 +282,64 @@ the vectors <code class="inline">{0, 0}</code>  and <code class="inline">{0, 0, 
 
           
 
-          
-
         </section>
       
 
       
-        <section id="types" class="types details-list">
+        <section id="types" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#types">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:location/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:location/0">location</a> ::
-  {number, number} |
-  {number, number, number}</code></pre>
+            <div class="detail" id="t:location/0">
   
+  
+  <div class="detail-header">
+    <a href="#t:location/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">location()</span>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>location() :: {number, number} | {number, number, number}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:vector/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:vector/0">vector</a> ::
-  {number, number} |
-  {number, number, number}</code></pre>
+<div class="detail" id="t:vector/0">
   
+  
+  <div class="detail-header">
+    <a href="#t:vector/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">vector()</span>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>vector() :: {number, number} | {number, number, number}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -306,31 +350,37 @@ the vectors <code class="inline">{0, 0}</code>  and <code class="inline">{0, 0, 
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Functions
           </h1>
           <div class="detail" id="add/2">
+  
+  
   <div class="detail-header">
     <a href="#add/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">add(arg1, arg2)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">add(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+          <pre>add(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Adds two vectors</p>
-<h2>Examples</h2>
+<h2 id="add/2-examples" class="section-heading">
+  <a href="#add/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.add({3, -4}, {2, 1})
 {5,-3}
 iex&gt; Vector.add({-2, 0, 5}, {0, 0, 0})
@@ -341,26 +391,31 @@ iex&gt; Vector.add({2, 1, -2}, Vector.reverse({2, 1, -2}))
   </section>
 </div>
 <div class="detail" id="basis/1">
+  
+  
   <div class="detail-header">
     <a href="#basis/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">basis(atom)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">basis(atom) :: <a href="#t:vector/0">vector</a></code></pre>
+          <pre>basis(atom) :: <a href="#t:vector/0">vector</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the basis vector for the given axis</p>
-<h2>Examples</h2>
+<h2 id="basis/1-examples" class="section-heading">
+  <a href="#basis/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.basis(:x)
 {1, 0, 0}
 iex&gt; Vector.basis(:y)
@@ -371,26 +426,31 @@ iex&gt; Vector.component(Vector.basis(:y), :y)
   </section>
 </div>
 <div class="detail" id="component/2">
+  
+  
   <div class="detail-header">
     <a href="#component/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">component(arg, atom)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">component(<a href="#t:vector/0">vector</a>, atom) :: number</code></pre>
+          <pre>component(<a href="#t:vector/0">vector</a>, atom) :: number</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the scalar component for the axis given</p>
-<h2>Examples</h2>
+<h2 id="component/2-examples" class="section-heading">
+  <a href="#component/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.component({3, -4}, :y)
 -4
 iex&gt; Vector.component({-6, 0, 8}, :z)
@@ -403,26 +463,31 @@ iex&gt; Vector.component(Vector.basis(:x), :z)
   </section>
 </div>
 <div class="detail" id="cross/2">
+  
+  
   <div class="detail-header">
     <a href="#cross/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">cross(arg1, arg2)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cross(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+          <pre>cross(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the cross product of two vectors <em>A</em>⨯<em>B</em></p>
-<h2>Examples</h2>
+<h2 id="cross/2-examples" class="section-heading">
+  <a href="#cross/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.cross({2, 3}, {1, 4})
 {0, 0, 5}
 iex&gt; Vector.cross({2, 2, -1}, {1, 4, 2})
@@ -433,26 +498,31 @@ iex&gt; Vector.cross({3, -3, 1}, {4, 9, 2})
   </section>
 </div>
 <div class="detail" id="cross_norm/2">
+  
+  
   <div class="detail-header">
     <a href="#cross_norm/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">cross_norm(arg1, arg2)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cross_norm(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: number</code></pre>
+          <pre>cross_norm(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: number</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the norm (magnitude) of the cross product of two vectors <em>A</em>⨯<em>B</em></p>
-<h2>Examples</h2>
+<h2 id="cross_norm/2-examples" class="section-heading">
+  <a href="#cross_norm/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.cross_norm({2, 3}, {1, 4})
 5
 iex&gt; Vector.cross_norm({1, 4}, {2, 2})
@@ -465,26 +535,31 @@ iex&gt; Float.floor(:math.pow(Vector.cross_norm({2, 2, -1}, {1, 4, 2}), 2))
   </section>
 </div>
 <div class="detail" id="divide/2">
+  
+  
   <div class="detail-header">
     <a href="#divide/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">divide(arg, s)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">divide(<a href="#t:vector/0">vector</a>, number) :: <a href="#t:vector/0">vector</a></code></pre>
+          <pre>divide(<a href="#t:vector/0">vector</a>, number) :: <a href="#t:vector/0">vector</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Divide a vector by scalar value <code class="inline">s</code></p>
-<h2>Examples</h2>
+<h2 id="divide/2-examples" class="section-heading">
+  <a href="#divide/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.divide({3, -4}, 2.5)
 {1.2, -1.6}
 iex&gt; Vector.divide({-2, 0, 5}, -2)
@@ -493,26 +568,31 @@ iex&gt; Vector.divide({-2, 0, 5}, -2)
   </section>
 </div>
 <div class="detail" id="dot/2">
+  
+  
   <div class="detail-header">
     <a href="#dot/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">dot(arg1, arg2)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">dot(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: number</code></pre>
+          <pre>dot(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: number</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the dot product of two vectors <em>A</em>⨯<em>B</em></p>
-<h2>Examples</h2>
+<h2 id="dot/2-examples" class="section-heading">
+  <a href="#dot/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.dot({2, 3}, {1, 4})
 14
 iex&gt; Vector.dot({1, 4}, {2, 2})
@@ -523,26 +603,33 @@ iex&gt; Vector.dot({2, 0, -1}, {0, 3, 3})
   </section>
 </div>
 <div class="detail" id="equal?/3">
+  
+  
+    <span id="equal?/2"></span>
+  
   <div class="detail-header">
     <a href="#equal?/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">equal?(a, b, tolerance \\ 0.0)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">equal?(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>, number) :: boolean</code></pre>
+          <pre>equal?(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>, number) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Compares two vectors for euqality, with an optional tolerance</p>
-<h2>Examples</h2>
+<h2 id="equal?/3-examples" class="section-heading">
+  <a href="#equal?/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.equal?({3, -4}, {3, -4})
 true
 iex&gt; Vector.equal?({3, -4}, {3.0001, -3.9999})
@@ -555,26 +642,31 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="multiply/2">
+  
+  
   <div class="detail-header">
     <a href="#multiply/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">multiply(arg, s)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">multiply(<a href="#t:vector/0">vector</a>, number) :: <a href="#t:vector/0">vector</a></code></pre>
+          <pre>multiply(<a href="#t:vector/0">vector</a>, number) :: <a href="#t:vector/0">vector</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Multiply a vector by scalar value <code class="inline">s</code></p>
-<h2>Examples</h2>
+<h2 id="multiply/2-examples" class="section-heading">
+  <a href="#multiply/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.multiply({3, -4}, 2.5)
 {7.5, -10.0}
 iex&gt; Vector.multiply({-2, 0, 5}, -2)
@@ -583,26 +675,31 @@ iex&gt; Vector.multiply({-2, 0, 5}, -2)
   </section>
 </div>
 <div class="detail" id="norm/1">
+  
+  
   <div class="detail-header">
     <a href="#norm/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">norm(arg)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">norm(<a href="#t:vector/0">vector</a>) :: number</code></pre>
+          <pre>norm(<a href="#t:vector/0">vector</a>) :: number</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the norm (magnitude) of a vector</p>
-<h2>Examples</h2>
+<h2 id="norm/1-examples" class="section-heading">
+  <a href="#norm/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.norm({3, 4})
 5.0
 iex&gt; Vector.norm({-1, 0})
@@ -613,26 +710,31 @@ iex&gt; Vector.norm({0, -2, 0})
   </section>
 </div>
 <div class="detail" id="norm_squared/1">
+  
+  
   <div class="detail-header">
     <a href="#norm_squared/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">norm_squared(arg)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">norm_squared(<a href="#t:vector/0">vector</a>) :: number</code></pre>
+          <pre>norm_squared(<a href="#t:vector/0">vector</a>) :: number</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the square of the norm norm (magnitude) of a vector</p>
-<h2>Examples</h2>
+<h2 id="norm_squared/1-examples" class="section-heading">
+  <a href="#norm_squared/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.norm_squared({3, 4})
 25
 iex&gt; Vector.norm_squared({1, 0})
@@ -645,27 +747,32 @@ iex&gt; Vector.norm_squared({-2, 3, 1})
   </section>
 </div>
 <div class="detail" id="project/3">
+  
+  
   <div class="detail-header">
     <a href="#project/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project(vector, start, distance)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">project(<a href="#t:vector/0">vector</a>, <a href="#t:location/0">location</a>, number) :: <a href="#t:location/0">location</a></code></pre>
+          <pre>project(<a href="#t:vector/0">vector</a>, <a href="#t:location/0">location</a>, number) :: <a href="#t:location/0">location</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a new coordinate by projecting a given length <code class="inline">distance</code> from
 coordinate <code class="inline">start</code> along <code class="inline">vector</code></p>
-<h2>Examples</h2>
+<h2 id="project/3-examples" class="section-heading">
+  <a href="#project/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.project({3, -4}, {-1, 1}, 4)
 {1.4, -2.2}
 iex&gt; Vector.project({-6, 0, 8}, {1, -2, 0.4}, 2.5)
@@ -676,26 +783,31 @@ iex&gt; Vector.project({-2, 1, 3}, {0, 0, 0}, 2.5) |&gt; Vector.norm()
   </section>
 </div>
 <div class="detail" id="reverse/1">
+  
+  
   <div class="detail-header">
     <a href="#reverse/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">reverse(arg)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">reverse(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+          <pre>reverse(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Reverses a vector</p>
-<h2>Examples</h2>
+<h2 id="reverse/1-examples" class="section-heading">
+  <a href="#reverse/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.reverse({3, -4})
 {-3, 4}
 iex&gt; Vector.reverse({-2, 0, 5})
@@ -706,26 +818,31 @@ iex&gt; Vector.cross_norm({-2, 3, 5}, Vector.reverse({-2, 3, 5}))
   </section>
 </div>
 <div class="detail" id="subtract/2">
+  
+  
   <div class="detail-header">
     <a href="#subtract/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">subtract(a, b)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">subtract(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+          <pre>subtract(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Subtract vector <em>B</em> from vector <em>A</em>.  Equivalent to <code class="inline">Vector.add(A, Vector.revers(B))</code></p>
-<h2>Examples</h2>
+<h2 id="subtract/2-examples" class="section-heading">
+  <a href="#subtract/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.subtract({3, -4}, {2, 1})
 {1,-5}
 iex&gt; Vector.subtract({-2, 0, 5}, {-3, 1, 2})
@@ -734,29 +851,34 @@ iex&gt; Vector.subtract({-2, 0, 5}, {-3, 1, 2})
   </section>
 </div>
 <div class="detail" id="unit/1">
+  
+  
   <div class="detail-header">
     <a href="#unit/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">unit(v)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">unit(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+          <pre>unit(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the unit vector parallel ot the given vector.
-This will raise an <code class="inline">ArithmeticError</code> if a zero-magnitude vector is given.
+This will raise an <a href="https://hexdocs.pm/elixir/ArithmeticError.html"><code class="inline">ArithmeticError</code></a> if a zero-magnitude vector is given.
 Use <code class="inline">unit_safe</code> if there is a chance that a zero-magnitude vector
 will be sent.</p>
-<h2>Examples</h2>
+<h2 id="unit/1-examples" class="section-heading">
+  <a href="#unit/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.unit({3, 4})
 {0.6, 0.8}
 iex&gt; Vector.unit({8, 0, 6})
@@ -769,27 +891,32 @@ iex&gt; Vector.unit({0, 0, 0})
   </section>
 </div>
 <div class="detail" id="unit_safe/1">
+  
+  
   <div class="detail-header">
     <a href="#unit_safe/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">unit_safe(v)</span>
-      
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+    
+    
+      <div class="specs">
         
-          <pre><code class="elixir">unit_safe(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></code></pre>
+          <pre>unit_safe(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the unit vector parallel ot the given vector, but will handle
 the vectors <code class="inline">{0, 0}</code>  and <code class="inline">{0, 0, 0}</code> by returning the same vector</p>
-<h2>Examples</h2>
+<h2 id="unit_safe/1-examples" class="section-heading">
+  <a href="#unit_safe/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Vector.unit_safe({3, 4})
 {0.6, 0.8}
 iex&gt; Vector.unit_safe({0, 0})
@@ -804,25 +931,25 @@ iex&gt; Vector.unit_safe({0, 0, 0})
       
 
       
-
-      
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.3),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle"><span class="sr-only">Switch theme</span></button>
+      </footer>
+    </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-6d2e071366.js"></script>
+  <script src="dist/app-da04b39d0c.js"></script>
+  
   </body>
 </html>
 
