@@ -3,13 +3,15 @@ defmodule Vector.Mixfile do
 
   def project do
     [app: :vector,
-     version: "0.3.0",
+     version: "1.0.0",
      elixir: "~> 1.2",
      description: description(),
      package: package(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      test_coverage: [tool: ExCoveralls],
+     preferred_cli_env: [coveralls: :test],
+     dialyzer: [plt_add_apps: [:poison, :mix]],
      deps: deps()]
   end
 
@@ -22,10 +24,12 @@ defmodule Vector.Mixfile do
 
   defp deps do
     [
-      {:earmark, "~> 0.1", only: :dev},
-      {:ex_doc, "~> 0.11", only: :dev},
-      {:benchfella, "~> 0.3.0", only: :dev},
-      {:excoveralls, "~> 0.4", only: :test}
+      {:earmark, "~> 1.0", only: :dev},
+      {:ex_doc, "~> 0.16", only: :dev},
+      {:benchfella, "~> 0.3", only: :dev},
+      {:excoveralls, "~> 0.4", only: :test},
+      {:dialyxir, "~> 0.4", only: [:dev], runtime: false},
+      {:credo, "~> 0.8", only: [:dev, :test], runtime: false}
     ]
   end
 

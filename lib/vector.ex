@@ -35,9 +35,9 @@ defmodule Vector do
   def cross({x1, y1, z1}, {x2, y2}), do: cross({x1, y1, z1}, {x2, y2, 0})
   def cross({x1, y1}, {x2, y2, z2}), do: cross({x1, y1, 0}, {x2, y2, z2})
   def cross({x1, y1, z1}, {x2, y2, z2}) do
-    { y1 * z2 - z1 * y2,
-      z1 * x2 - x1 * z2,
-      x1 * y2 - y1 * x2 }
+    {y1 * z2 - z1 * y2,
+     z1 * x2 - x1 * z2,
+     x1 * y2 - y1 * x2}
   end
 
   @doc ~S"""
@@ -296,7 +296,6 @@ defmodule Vector do
   def component({x, _, _}, :x), do: x
   def component({_, y, _}, :y), do: y
   def component({_, _, z}, :z), do: z
-
 
   @doc ~S"""
   Returns the basis vector for the given axis
