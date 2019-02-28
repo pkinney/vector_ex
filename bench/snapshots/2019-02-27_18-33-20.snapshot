@@ -1,0 +1,10 @@
+duration:1.0;mem stats:false;sys mem stats:false
+module;test;tags;iterations;elapsed
+VectorBench	A . (B x C)		10	1113209
+VectorBench	A . B		5000	2131973
+VectorBench	A x (B x C)		20	1609173
+VectorBench	A x B		5000	3273046
+VectorBench	B (A . C) - C (A . B)		10	1508749
+VectorBench	unit vector		1000	2031061
+VectorBench	zero-vector cross 2D		100000000	2992802
+VectorBench	zero-vector cross 3D		100000000	6862010

@@ -1,60 +1,53 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.16.3">
-    <title>Vector – vector v1.0.0</title>
-    <link rel="stylesheet" href="dist/app-5b9e160cec.css" />
-    
+    <meta name="generator" content="ExDoc v0.19.3">
+    <title>Vector — vector v1.0.1</title>
+    <link rel="stylesheet" href="dist/html-399e30b9b028e3059575.css" />
       <link rel="canonical" href="https://hexdocs.pm/vector/Vector.html" />
-    
-    <script src="dist/sidebar_items-85cf0fa78e.js"></script>
+    <script src="dist/sidebar_items-71d22232a3.js"></script>
+    <script async src="dist/html-399e30b9b028e3059575.js"></script>
     
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
-
     <div class="main">
-<button class="sidebar-toggle">
+<button class="sidebar-button sidebar-toggle">
   <span class="icon-menu" aria-hidden="true"></span>
   <span class="sr-only">Toggle Sidebar</span>
 </button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
 <section class="sidebar">
 
-  
   <a href="api-reference.html" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
-        vector
-      </h1>
+vector      </h1>
       <h2 class="sidebar-projectVersion">
-        v1.0.0
+        v1.0.1
       </h2>
     </div>
-    
   </a>
 
   <form class="sidebar-search" action="search.html">
     <button type="submit" class="search-button">
       <span class="icon-search" aria-hidden="true"></span>
     </button>
-    <input name="q" type="text" id="search-list" class="search-input" placeholder="search" aria-label="Search" autocomplete="off" />
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
   </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-    
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-    
 
-    
 
-    
-
-    
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -66,33 +59,28 @@
 
 
       <h1>
-        <small class="visible-xs">vector v1.0.0</small>
-        Vector
-        
-      </h1>
+        <small class="visible-xs">vector v1.0.1</small>
+Vector              </h1>
 
-      
+
         <section id="moduledoc">
-          <p>A library of two- and three-dimensional vector operations.  All vectors
+<p>A library of two- and three-dimensional vector operations.  All vectors
 are represented as tuples with either two or three elements.</p>
 <h2 id="module-examples" class="section-heading">
   <a href="#module-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; # Vector Tripple Product Identity
-...&gt; a = {2, 3, 1}
-...&gt; b = {1, 4, -2}
-...&gt; c = {-1, 2, 1}
-...&gt; Vector.equal?(
-...&gt;   Vector.cross(Vector.cross(a, b), c),
-...&gt;   Vector.subtract(Vector.multiply(b, Vector.dot(a, c)), Vector.multiply(a, Vector.dot(b, c))))
-true</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="c1"># Vector Tripple Product Identity</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="3725611105-1">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="3725611105-1">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="3725611105-2">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p" data-group-id="3725611105-2">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="3725611105-3">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="3725611105-3">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">equal?</span><span class="p" data-group-id="3725611105-4">(</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="nc">Vector</span><span class="o">.</span><span class="n">cross</span><span class="p" data-group-id="3725611105-5">(</span><span class="nc">Vector</span><span class="o">.</span><span class="n">cross</span><span class="p" data-group-id="3725611105-6">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p" data-group-id="3725611105-6">)</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p" data-group-id="3725611105-5">)</span><span class="p">,</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="nc">Vector</span><span class="o">.</span><span class="n">subtract</span><span class="p" data-group-id="3725611105-7">(</span><span class="nc">Vector</span><span class="o">.</span><span class="n">multiply</span><span class="p" data-group-id="3725611105-8">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="nc">Vector</span><span class="o">.</span><span class="n">dot</span><span class="p" data-group-id="3725611105-9">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p" data-group-id="3725611105-9">)</span><span class="p" data-group-id="3725611105-8">)</span><span class="p">,</span><span class="w"> </span><span class="nc">Vector</span><span class="o">.</span><span class="n">multiply</span><span class="p" data-group-id="3725611105-10">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="nc">Vector</span><span class="o">.</span><span class="n">dot</span><span class="p" data-group-id="3725611105-11">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p" data-group-id="3725611105-11">)</span><span class="p" data-group-id="3725611105-10">)</span><span class="p" data-group-id="3725611105-7">)</span><span class="p" data-group-id="3725611105-4">)</span><span class="w">
+</span><span class="no">true</span></code></pre>
         </section>
-      
 
-      
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
@@ -101,776 +89,590 @@ true</code></pre>
             </a>
             Summary
           </h1>
-          
   <div class="summary-types summary">
     <h2>
       <a href="#types">Types</a>
     </h2>
-    <div class="summary-row">
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#t:location/0">location()</a>
   </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#t:vector/0">vector()</a>
   </div>
-  
 </div>
-
   </div>
-
-
-          
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
     </h2>
-    <div class="summary-row">
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#add/2">add(arg1, arg2)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Adds two vectors</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#basis/1">basis(atom)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the basis vector for the given axis</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#component/2">component(arg, atom)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the scalar component for the axis given</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#cross/2">cross(arg1, arg2)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the cross product of two vectors <em>A</em>⨯<em>B</em></p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#cross_norm/2">cross_norm(arg1, arg2)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the norm (magnitude) of the cross product of two vectors <em>A</em>⨯<em>B</em></p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#divide/2">divide(arg, s)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Divide a vector by scalar value <code class="inline">s</code></p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#dot/2">dot(arg1, arg2)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the dot product of two vectors <em>A</em>⨯<em>B</em></p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#equal?/3">equal?(a, b, tolerance \\ 0.0)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Compares two vectors for euqality, with an optional tolerance</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#multiply/2">multiply(arg, s)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Multiply a vector by scalar value <code class="inline">s</code></p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#norm/1">norm(arg)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the norm (magnitude) of a vector</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#norm_squared/1">norm_squared(arg)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the square of the norm norm (magnitude) of a vector</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#project/3">project(vector, start, distance)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns a new coordinate by projecting a given length <code class="inline">distance</code> from
 coordinate <code class="inline">start</code> along <code class="inline">vector</code></p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#reverse/1">reverse(arg)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Reverses a vector</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#subtract/2">subtract(a, b)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Subtract vector <em>B</em> from vector <em>A</em>.  Equivalent to <code class="inline">Vector.add(A, Vector.revers(B))</code></p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#unit/1">unit(v)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the unit vector parallel ot the given vector.
 This will raise an <a href="https://hexdocs.pm/elixir/ArithmeticError.html"><code class="inline">ArithmeticError</code></a> if a zero-magnitude vector is given.
 Use <code class="inline">unit_safe</code> if there is a chance that a zero-magnitude vector
 will be sent</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#unit_safe/1">unit_safe(v)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the unit vector parallel ot the given vector, but will handle
 the vectors <code class="inline">{0, 0}</code>  and <code class="inline">{0, 0, 0}</code> by returning the same vector</p>
 </div>
-  
 </div>
-
   </div>
-
-
-          
-
         </section>
-      
 
-      
         <section id="types" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#types">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-            Types
-          </h1>
+Types          </h1>
           <div class="types-list">
-            <div class="detail" id="t:location/0">
-  
-  
-  <div class="detail-header">
+<section class="detail" id="t:location/0">
+    <div class="detail-header">
     <a href="#t:location/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <span class="signature">location()</span>
-    
-    
-    
+    <h1 class="signature">location()</span>
+        
       <div class="specs">
-        
-          <pre>location() :: {number, number} | {number, number, number}</pre>
-        
+          <pre>location() :: {<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()} | {<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()}</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    
   </section>
-</div>
-<div class="detail" id="t:vector/0">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="t:vector/0">
+    <div class="detail-header">
     <a href="#t:vector/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <span class="signature">vector()</span>
-    
-    
-    
+    <h1 class="signature">vector()</span>
+        
       <div class="specs">
-        
-          <pre>vector() :: {number, number} | {number, number, number}</pre>
-        
+          <pre>vector() :: {<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()} | {<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()}</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    
   </section>
-</div>
-
+</section>
           </div>
         </section>
-      
-
-      
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-            Functions
-          </h1>
-          <div class="detail" id="add/2">
-  
-  
-  <div class="detail-header">
+Functions          </h1>
+          <div class="functions-list">
+<section class="detail" id="add/2">
+    <div class="detail-header">
     <a href="#add/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">add(arg1, arg2)</span>
-    
-    
-    
+    <h1 class="signature">add(arg1, arg2)</span>
+        
       <div class="specs">
-        
-          <pre>add(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
-        
+          <pre>add(<a href="#t:vector/0">vector</a>(), <a href="#t:vector/0">vector</a>()) :: <a href="#t:vector/0">vector</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Adds two vectors</p>
+<p>Adds two vectors</p>
 <h2 id="add/2-examples" class="section-heading">
   <a href="#add/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.add({3, -4}, {2, 1})
-{5,-3}
-iex&gt; Vector.add({-2, 0, 5}, {0, 0, 0})
-{-2, 0, 5}
-iex&gt; Vector.add({2, 1, -2}, Vector.reverse({2, 1, -2}))
-{0, 0, 0}</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">add</span><span class="p" data-group-id="9512692941-1">(</span><span class="p" data-group-id="9512692941-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p" data-group-id="9512692941-2">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="9512692941-3">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="9512692941-3">}</span><span class="p" data-group-id="9512692941-1">)</span><span class="w">
+</span><span class="p" data-group-id="9512692941-4">{</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p" data-group-id="9512692941-4">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">add</span><span class="p" data-group-id="9512692941-5">(</span><span class="p" data-group-id="9512692941-6">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="9512692941-6">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="9512692941-7">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="9512692941-7">}</span><span class="p" data-group-id="9512692941-5">)</span><span class="w">
+</span><span class="p" data-group-id="9512692941-8">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="9512692941-8">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">add</span><span class="p" data-group-id="9512692941-9">(</span><span class="p" data-group-id="9512692941-10">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p" data-group-id="9512692941-10">}</span><span class="p">,</span><span class="w"> </span><span class="nc">Vector</span><span class="o">.</span><span class="n">reverse</span><span class="p" data-group-id="9512692941-11">(</span><span class="p" data-group-id="9512692941-12">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p" data-group-id="9512692941-12">}</span><span class="p" data-group-id="9512692941-11">)</span><span class="p" data-group-id="9512692941-9">)</span><span class="w">
+</span><span class="p" data-group-id="9512692941-13">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="9512692941-13">}</span></code></pre>
   </section>
-</div>
-<div class="detail" id="basis/1">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="basis/1">
+    <div class="detail-header">
     <a href="#basis/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">basis(atom)</span>
-    
-    
-    
+    <h1 class="signature">basis(atom)</span>
+        
       <div class="specs">
-        
-          <pre>basis(atom) :: <a href="#t:vector/0">vector</a></pre>
-        
+          <pre>basis(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()) :: <a href="#t:vector/0">vector</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Returns the basis vector for the given axis</p>
+<p>Returns the basis vector for the given axis</p>
 <h2 id="basis/1-examples" class="section-heading">
   <a href="#basis/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.basis(:x)
-{1, 0, 0}
-iex&gt; Vector.basis(:y)
-{0, 1, 0}
-iex&gt; Vector.component(Vector.basis(:y), :y)
-1</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">basis</span><span class="p" data-group-id="6091161430-1">(</span><span class="ss">:x</span><span class="p" data-group-id="6091161430-1">)</span><span class="w">
+</span><span class="p" data-group-id="6091161430-2">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="6091161430-2">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">basis</span><span class="p" data-group-id="6091161430-3">(</span><span class="ss">:y</span><span class="p" data-group-id="6091161430-3">)</span><span class="w">
+</span><span class="p" data-group-id="6091161430-4">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="6091161430-4">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">component</span><span class="p" data-group-id="6091161430-5">(</span><span class="nc">Vector</span><span class="o">.</span><span class="n">basis</span><span class="p" data-group-id="6091161430-6">(</span><span class="ss">:y</span><span class="p" data-group-id="6091161430-6">)</span><span class="p">,</span><span class="w"> </span><span class="ss">:y</span><span class="p" data-group-id="6091161430-5">)</span><span class="w">
+</span><span class="mi">1</span></code></pre>
   </section>
-</div>
-<div class="detail" id="component/2">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="component/2">
+    <div class="detail-header">
     <a href="#component/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">component(arg, atom)</span>
-    
-    
-    
+    <h1 class="signature">component(arg, atom)</span>
+        
       <div class="specs">
-        
-          <pre>component(<a href="#t:vector/0">vector</a>, atom) :: number</pre>
-        
+          <pre>component(<a href="#t:vector/0">vector</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Returns the scalar component for the axis given</p>
+<p>Returns the scalar component for the axis given</p>
 <h2 id="component/2-examples" class="section-heading">
   <a href="#component/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.component({3, -4}, :y)
--4
-iex&gt; Vector.component({-6, 0, 8}, :z)
-8
-iex&gt; Vector.component({1, -2}, :z)
-0
-iex&gt; Vector.component(Vector.basis(:x), :z)
-0</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">component</span><span class="p" data-group-id="9164639209-1">(</span><span class="p" data-group-id="9164639209-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p" data-group-id="9164639209-2">}</span><span class="p">,</span><span class="w"> </span><span class="ss">:y</span><span class="p" data-group-id="9164639209-1">)</span><span class="w">
+</span><span class="o">-</span><span class="mi">4</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">component</span><span class="p" data-group-id="9164639209-3">(</span><span class="p" data-group-id="9164639209-4">{</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p" data-group-id="9164639209-4">}</span><span class="p">,</span><span class="w"> </span><span class="ss">:z</span><span class="p" data-group-id="9164639209-3">)</span><span class="w">
+</span><span class="mi">8</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">component</span><span class="p" data-group-id="9164639209-5">(</span><span class="p" data-group-id="9164639209-6">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p" data-group-id="9164639209-6">}</span><span class="p">,</span><span class="w"> </span><span class="ss">:z</span><span class="p" data-group-id="9164639209-5">)</span><span class="w">
+</span><span class="mi">0</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">component</span><span class="p" data-group-id="9164639209-7">(</span><span class="nc">Vector</span><span class="o">.</span><span class="n">basis</span><span class="p" data-group-id="9164639209-8">(</span><span class="ss">:x</span><span class="p" data-group-id="9164639209-8">)</span><span class="p">,</span><span class="w"> </span><span class="ss">:z</span><span class="p" data-group-id="9164639209-7">)</span><span class="w">
+</span><span class="mi">0</span></code></pre>
   </section>
-</div>
-<div class="detail" id="cross/2">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="cross/2">
+    <div class="detail-header">
     <a href="#cross/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">cross(arg1, arg2)</span>
-    
-    
-    
+    <h1 class="signature">cross(arg1, arg2)</span>
+        
       <div class="specs">
-        
-          <pre>cross(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
-        
+          <pre>cross(<a href="#t:vector/0">vector</a>(), <a href="#t:vector/0">vector</a>()) :: <a href="#t:vector/0">vector</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Returns the cross product of two vectors <em>A</em>⨯<em>B</em></p>
+<p>Returns the cross product of two vectors <em>A</em>⨯<em>B</em></p>
 <h2 id="cross/2-examples" class="section-heading">
   <a href="#cross/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.cross({2, 3}, {1, 4})
-{0, 0, 5}
-iex&gt; Vector.cross({2, 2, -1}, {1, 4, 2})
-{8, -5, 6}
-iex&gt; Vector.cross({3, -3, 1}, {4, 9, 2})
-{-15, -2, 39}</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">cross</span><span class="p" data-group-id="2455201655-1">(</span><span class="p" data-group-id="2455201655-2">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="2455201655-2">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="2455201655-3">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="2455201655-3">}</span><span class="p" data-group-id="2455201655-1">)</span><span class="w">
+</span><span class="p" data-group-id="2455201655-4">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="2455201655-4">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">cross</span><span class="p" data-group-id="2455201655-5">(</span><span class="p" data-group-id="2455201655-6">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p" data-group-id="2455201655-6">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="2455201655-7">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="2455201655-7">}</span><span class="p" data-group-id="2455201655-5">)</span><span class="w">
+</span><span class="p" data-group-id="2455201655-8">{</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p" data-group-id="2455201655-8">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">cross</span><span class="p" data-group-id="2455201655-9">(</span><span class="p" data-group-id="2455201655-10">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="2455201655-10">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="2455201655-11">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="2455201655-11">}</span><span class="p" data-group-id="2455201655-9">)</span><span class="w">
+</span><span class="p" data-group-id="2455201655-12">{</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">39</span><span class="p" data-group-id="2455201655-12">}</span></code></pre>
   </section>
-</div>
-<div class="detail" id="cross_norm/2">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="cross_norm/2">
+    <div class="detail-header">
     <a href="#cross_norm/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">cross_norm(arg1, arg2)</span>
-    
-    
-    
+    <h1 class="signature">cross_norm(arg1, arg2)</span>
+        
       <div class="specs">
-        
-          <pre>cross_norm(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: number</pre>
-        
+          <pre>cross_norm(<a href="#t:vector/0">vector</a>(), <a href="#t:vector/0">vector</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Returns the norm (magnitude) of the cross product of two vectors <em>A</em>⨯<em>B</em></p>
+<p>Returns the norm (magnitude) of the cross product of two vectors <em>A</em>⨯<em>B</em></p>
 <h2 id="cross_norm/2-examples" class="section-heading">
   <a href="#cross_norm/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.cross_norm({2, 3}, {1, 4})
-5
-iex&gt; Vector.cross_norm({1, 4}, {2, 2})
-6
-iex&gt; Vector.cross_norm({2, 0, -1}, {0, 3, 3})
-9.0
-iex&gt; Float.floor(:math.pow(Vector.cross_norm({2, 2, -1}, {1, 4, 2}), 2))
-125.0</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">cross_norm</span><span class="p" data-group-id="9503448422-1">(</span><span class="p" data-group-id="9503448422-2">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="9503448422-2">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="9503448422-3">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="9503448422-3">}</span><span class="p" data-group-id="9503448422-1">)</span><span class="w">
+</span><span class="mi">5</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">cross_norm</span><span class="p" data-group-id="9503448422-4">(</span><span class="p" data-group-id="9503448422-5">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="9503448422-5">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="9503448422-6">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="9503448422-6">}</span><span class="p" data-group-id="9503448422-4">)</span><span class="w">
+</span><span class="mi">6</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">cross_norm</span><span class="p" data-group-id="9503448422-7">(</span><span class="p" data-group-id="9503448422-8">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p" data-group-id="9503448422-8">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="9503448422-9">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="9503448422-9">}</span><span class="p" data-group-id="9503448422-7">)</span><span class="w">
+</span><span class="mf">9.0</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Float</span><span class="o">.</span><span class="n">floor</span><span class="p" data-group-id="9503448422-10">(</span><span class="ss">:math</span><span class="o">.</span><span class="n">pow</span><span class="p" data-group-id="9503448422-11">(</span><span class="nc">Vector</span><span class="o">.</span><span class="n">cross_norm</span><span class="p" data-group-id="9503448422-12">(</span><span class="p" data-group-id="9503448422-13">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p" data-group-id="9503448422-13">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="9503448422-14">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="9503448422-14">}</span><span class="p" data-group-id="9503448422-12">)</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="9503448422-11">)</span><span class="p" data-group-id="9503448422-10">)</span><span class="w">
+</span><span class="mf">125.0</span></code></pre>
   </section>
-</div>
-<div class="detail" id="divide/2">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="divide/2">
+    <div class="detail-header">
     <a href="#divide/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">divide(arg, s)</span>
-    
-    
-    
+    <h1 class="signature">divide(arg, s)</span>
+        
       <div class="specs">
-        
-          <pre>divide(<a href="#t:vector/0">vector</a>, number) :: <a href="#t:vector/0">vector</a></pre>
-        
+          <pre>divide(<a href="#t:vector/0">vector</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()) :: <a href="#t:vector/0">vector</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Divide a vector by scalar value <code class="inline">s</code></p>
+<p>Divide a vector by scalar value <code class="inline">s</code></p>
 <h2 id="divide/2-examples" class="section-heading">
   <a href="#divide/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.divide({3, -4}, 2.5)
-{1.2, -1.6}
-iex&gt; Vector.divide({-2, 0, 5}, -2)
-{1.0, 0.0, -2.5}</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">divide</span><span class="p" data-group-id="0480299047-1">(</span><span class="p" data-group-id="0480299047-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p" data-group-id="0480299047-2">}</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p" data-group-id="0480299047-1">)</span><span class="w">
+</span><span class="p" data-group-id="0480299047-3">{</span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.6</span><span class="p" data-group-id="0480299047-3">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">divide</span><span class="p" data-group-id="0480299047-4">(</span><span class="p" data-group-id="0480299047-5">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="0480299047-5">}</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p" data-group-id="0480299047-4">)</span><span class="w">
+</span><span class="p" data-group-id="0480299047-6">{</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">2.5</span><span class="p" data-group-id="0480299047-6">}</span></code></pre>
   </section>
-</div>
-<div class="detail" id="dot/2">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="dot/2">
+    <div class="detail-header">
     <a href="#dot/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">dot(arg1, arg2)</span>
-    
-    
-    
+    <h1 class="signature">dot(arg1, arg2)</span>
+        
       <div class="specs">
-        
-          <pre>dot(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: number</pre>
-        
+          <pre>dot(<a href="#t:vector/0">vector</a>(), <a href="#t:vector/0">vector</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Returns the dot product of two vectors <em>A</em>⨯<em>B</em></p>
+<p>Returns the dot product of two vectors <em>A</em>⨯<em>B</em></p>
 <h2 id="dot/2-examples" class="section-heading">
   <a href="#dot/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.dot({2, 3}, {1, 4})
-14
-iex&gt; Vector.dot({1, 4}, {2, 2})
-10
-iex&gt; Vector.dot({2, 0, -1}, {0, 3, 3})
--3</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">dot</span><span class="p" data-group-id="2564884989-1">(</span><span class="p" data-group-id="2564884989-2">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="2564884989-2">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="2564884989-3">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="2564884989-3">}</span><span class="p" data-group-id="2564884989-1">)</span><span class="w">
+</span><span class="mi">14</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">dot</span><span class="p" data-group-id="2564884989-4">(</span><span class="p" data-group-id="2564884989-5">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="2564884989-5">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="2564884989-6">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="2564884989-6">}</span><span class="p" data-group-id="2564884989-4">)</span><span class="w">
+</span><span class="mi">10</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">dot</span><span class="p" data-group-id="2564884989-7">(</span><span class="p" data-group-id="2564884989-8">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p" data-group-id="2564884989-8">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="2564884989-9">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="2564884989-9">}</span><span class="p" data-group-id="2564884989-7">)</span><span class="w">
+</span><span class="o">-</span><span class="mi">3</span></code></pre>
   </section>
-</div>
-<div class="detail" id="equal?/3">
-  
+</section>
+<section class="detail" id="equal?/3">
   
     <span id="equal?/2"></span>
-  
   <div class="detail-header">
     <a href="#equal?/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">equal?(a, b, tolerance \\ 0.0)</span>
-    
-    
-    
+    <h1 class="signature">equal?(a, b, tolerance \\ 0.0)</span>
+        
       <div class="specs">
-        
-          <pre>equal?(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>, number) :: boolean</pre>
-        
+          <pre>equal?(<a href="#t:vector/0">vector</a>(), <a href="#t:vector/0">vector</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Compares two vectors for euqality, with an optional tolerance</p>
+<p>Compares two vectors for euqality, with an optional tolerance</p>
 <h2 id="equal?/3-examples" class="section-heading">
   <a href="#equal?/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.equal?({3, -4}, {3, -4})
-true
-iex&gt; Vector.equal?({3, -4}, {3.0001, -3.9999})
-false
-iex&gt; Vector.equal?({3, -4}, {3.0001, -3.9999}, 0.001)
-true
-iex&gt; Vector.equal?({3, -4, 1}, {3.0001, -3.9999, 1.0}, 0.001)
-true</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">equal?</span><span class="p" data-group-id="1486519786-1">(</span><span class="p" data-group-id="1486519786-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p" data-group-id="1486519786-2">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="1486519786-3">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p" data-group-id="1486519786-3">}</span><span class="p" data-group-id="1486519786-1">)</span><span class="w">
+</span><span class="no">true</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">equal?</span><span class="p" data-group-id="1486519786-4">(</span><span class="p" data-group-id="1486519786-5">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p" data-group-id="1486519786-5">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="1486519786-6">{</span><span class="mf">3.0001</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">3.9999</span><span class="p" data-group-id="1486519786-6">}</span><span class="p" data-group-id="1486519786-4">)</span><span class="w">
+</span><span class="no">false</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">equal?</span><span class="p" data-group-id="1486519786-7">(</span><span class="p" data-group-id="1486519786-8">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p" data-group-id="1486519786-8">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="1486519786-9">{</span><span class="mf">3.0001</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">3.9999</span><span class="p" data-group-id="1486519786-9">}</span><span class="p">,</span><span class="w"> </span><span class="mf">0.001</span><span class="p" data-group-id="1486519786-7">)</span><span class="w">
+</span><span class="no">true</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">equal?</span><span class="p" data-group-id="1486519786-10">(</span><span class="p" data-group-id="1486519786-11">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="1486519786-11">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="1486519786-12">{</span><span class="mf">3.0001</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">3.9999</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p" data-group-id="1486519786-12">}</span><span class="p">,</span><span class="w"> </span><span class="mf">0.001</span><span class="p" data-group-id="1486519786-10">)</span><span class="w">
+</span><span class="no">true</span></code></pre>
   </section>
-</div>
-<div class="detail" id="multiply/2">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="multiply/2">
+    <div class="detail-header">
     <a href="#multiply/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">multiply(arg, s)</span>
-    
-    
-    
+    <h1 class="signature">multiply(arg, s)</span>
+        
       <div class="specs">
-        
-          <pre>multiply(<a href="#t:vector/0">vector</a>, number) :: <a href="#t:vector/0">vector</a></pre>
-        
+          <pre>multiply(<a href="#t:vector/0">vector</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()) :: <a href="#t:vector/0">vector</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Multiply a vector by scalar value <code class="inline">s</code></p>
+<p>Multiply a vector by scalar value <code class="inline">s</code></p>
 <h2 id="multiply/2-examples" class="section-heading">
   <a href="#multiply/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.multiply({3, -4}, 2.5)
-{7.5, -10.0}
-iex&gt; Vector.multiply({-2, 0, 5}, -2)
-{4, 0, -10}</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">multiply</span><span class="p" data-group-id="8124831871-1">(</span><span class="p" data-group-id="8124831871-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p" data-group-id="8124831871-2">}</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p" data-group-id="8124831871-1">)</span><span class="w">
+</span><span class="p" data-group-id="8124831871-3">{</span><span class="mf">7.5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">10.0</span><span class="p" data-group-id="8124831871-3">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">multiply</span><span class="p" data-group-id="8124831871-4">(</span><span class="p" data-group-id="8124831871-5">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="8124831871-5">}</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p" data-group-id="8124831871-4">)</span><span class="w">
+</span><span class="p" data-group-id="8124831871-6">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">10</span><span class="p" data-group-id="8124831871-6">}</span></code></pre>
   </section>
-</div>
-<div class="detail" id="norm/1">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="norm/1">
+    <div class="detail-header">
     <a href="#norm/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">norm(arg)</span>
-    
-    
-    
+    <h1 class="signature">norm(arg)</span>
+        
       <div class="specs">
-        
-          <pre>norm(<a href="#t:vector/0">vector</a>) :: number</pre>
-        
+          <pre>norm(<a href="#t:vector/0">vector</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Returns the norm (magnitude) of a vector</p>
+<p>Returns the norm (magnitude) of a vector</p>
 <h2 id="norm/1-examples" class="section-heading">
   <a href="#norm/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.norm({3, 4})
-5.0
-iex&gt; Vector.norm({-1, 0})
-1
-iex&gt; Vector.norm({0, -2, 0})
-2</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">norm</span><span class="p" data-group-id="4107404011-1">(</span><span class="p" data-group-id="4107404011-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="4107404011-2">}</span><span class="p" data-group-id="4107404011-1">)</span><span class="w">
+</span><span class="mf">5.0</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">norm</span><span class="p" data-group-id="4107404011-3">(</span><span class="p" data-group-id="4107404011-4">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="4107404011-4">}</span><span class="p" data-group-id="4107404011-3">)</span><span class="w">
+</span><span class="mi">1</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">norm</span><span class="p" data-group-id="4107404011-5">(</span><span class="p" data-group-id="4107404011-6">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="4107404011-6">}</span><span class="p" data-group-id="4107404011-5">)</span><span class="w">
+</span><span class="mi">2</span></code></pre>
   </section>
-</div>
-<div class="detail" id="norm_squared/1">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="norm_squared/1">
+    <div class="detail-header">
     <a href="#norm_squared/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">norm_squared(arg)</span>
-    
-    
-    
+    <h1 class="signature">norm_squared(arg)</span>
+        
       <div class="specs">
-        
-          <pre>norm_squared(<a href="#t:vector/0">vector</a>) :: number</pre>
-        
+          <pre>norm_squared(<a href="#t:vector/0">vector</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Returns the square of the norm norm (magnitude) of a vector</p>
+<p>Returns the square of the norm norm (magnitude) of a vector</p>
 <h2 id="norm_squared/1-examples" class="section-heading">
   <a href="#norm_squared/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.norm_squared({3, 4})
-25
-iex&gt; Vector.norm_squared({1, 0})
-1
-iex&gt; Vector.norm_squared({2, 0, -1})
-5
-iex&gt; Vector.norm_squared({-2, 3, 1})
-14</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">norm_squared</span><span class="p" data-group-id="4786615588-1">(</span><span class="p" data-group-id="4786615588-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="4786615588-2">}</span><span class="p" data-group-id="4786615588-1">)</span><span class="w">
+</span><span class="mi">25</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">norm_squared</span><span class="p" data-group-id="4786615588-3">(</span><span class="p" data-group-id="4786615588-4">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="4786615588-4">}</span><span class="p" data-group-id="4786615588-3">)</span><span class="w">
+</span><span class="mi">1</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">norm_squared</span><span class="p" data-group-id="4786615588-5">(</span><span class="p" data-group-id="4786615588-6">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p" data-group-id="4786615588-6">}</span><span class="p" data-group-id="4786615588-5">)</span><span class="w">
+</span><span class="mi">5</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">norm_squared</span><span class="p" data-group-id="4786615588-7">(</span><span class="p" data-group-id="4786615588-8">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="4786615588-8">}</span><span class="p" data-group-id="4786615588-7">)</span><span class="w">
+</span><span class="mi">14</span></code></pre>
   </section>
-</div>
-<div class="detail" id="project/3">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="project/3">
+    <div class="detail-header">
     <a href="#project/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">project(vector, start, distance)</span>
-    
-    
-    
+    <h1 class="signature">project(vector, start, distance)</span>
+        
       <div class="specs">
-        
-          <pre>project(<a href="#t:vector/0">vector</a>, <a href="#t:location/0">location</a>, number) :: <a href="#t:location/0">location</a></pre>
-        
+          <pre>project(<a href="#t:vector/0">vector</a>(), <a href="#t:location/0">location</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()) :: <a href="#t:location/0">location</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Returns a new coordinate by projecting a given length <code class="inline">distance</code> from
+<p>Returns a new coordinate by projecting a given length <code class="inline">distance</code> from
 coordinate <code class="inline">start</code> along <code class="inline">vector</code></p>
 <h2 id="project/3-examples" class="section-heading">
   <a href="#project/3-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.project({3, -4}, {-1, 1}, 4)
-{1.4, -2.2}
-iex&gt; Vector.project({-6, 0, 8}, {1, -2, 0.4}, 2.5)
-{-0.5, -2.0, 2.4}
-iex&gt; Vector.project({-2, 1, 3}, {0, 0, 0}, 2.5) |&gt; Vector.norm()
-2.5</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">project</span><span class="p" data-group-id="7214262984-1">(</span><span class="p" data-group-id="7214262984-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p" data-group-id="7214262984-2">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="7214262984-3">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="7214262984-3">}</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="7214262984-1">)</span><span class="w">
+</span><span class="p" data-group-id="7214262984-4">{</span><span class="mf">1.4</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">2.2</span><span class="p" data-group-id="7214262984-4">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">project</span><span class="p" data-group-id="7214262984-5">(</span><span class="p" data-group-id="7214262984-6">{</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p" data-group-id="7214262984-6">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="7214262984-7">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.4</span><span class="p" data-group-id="7214262984-7">}</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p" data-group-id="7214262984-5">)</span><span class="w">
+</span><span class="p" data-group-id="7214262984-8">{</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.4</span><span class="p" data-group-id="7214262984-8">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">project</span><span class="p" data-group-id="7214262984-9">(</span><span class="p" data-group-id="7214262984-10">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="7214262984-10">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="7214262984-11">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="7214262984-11">}</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p" data-group-id="7214262984-9">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Vector</span><span class="o">.</span><span class="n">norm</span><span class="p" data-group-id="7214262984-12">(</span><span class="p" data-group-id="7214262984-12">)</span><span class="w">
+</span><span class="mf">2.5</span></code></pre>
   </section>
-</div>
-<div class="detail" id="reverse/1">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="reverse/1">
+    <div class="detail-header">
     <a href="#reverse/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">reverse(arg)</span>
-    
-    
-    
+    <h1 class="signature">reverse(arg)</span>
+        
       <div class="specs">
-        
-          <pre>reverse(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
-        
+          <pre>reverse(<a href="#t:vector/0">vector</a>()) :: <a href="#t:vector/0">vector</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Reverses a vector</p>
+<p>Reverses a vector</p>
 <h2 id="reverse/1-examples" class="section-heading">
   <a href="#reverse/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.reverse({3, -4})
-{-3, 4}
-iex&gt; Vector.reverse({-2, 0, 5})
-{2, 0, -5}
-iex&gt; Vector.cross_norm({-2, 3, 5}, Vector.reverse({-2, 3, 5}))
-0</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">reverse</span><span class="p" data-group-id="4129151061-1">(</span><span class="p" data-group-id="4129151061-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p" data-group-id="4129151061-2">}</span><span class="p" data-group-id="4129151061-1">)</span><span class="w">
+</span><span class="p" data-group-id="4129151061-3">{</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="4129151061-3">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">reverse</span><span class="p" data-group-id="4129151061-4">(</span><span class="p" data-group-id="4129151061-5">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="4129151061-5">}</span><span class="p" data-group-id="4129151061-4">)</span><span class="w">
+</span><span class="p" data-group-id="4129151061-6">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p" data-group-id="4129151061-6">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">cross_norm</span><span class="p" data-group-id="4129151061-7">(</span><span class="p" data-group-id="4129151061-8">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="4129151061-8">}</span><span class="p">,</span><span class="w"> </span><span class="nc">Vector</span><span class="o">.</span><span class="n">reverse</span><span class="p" data-group-id="4129151061-9">(</span><span class="p" data-group-id="4129151061-10">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="4129151061-10">}</span><span class="p" data-group-id="4129151061-9">)</span><span class="p" data-group-id="4129151061-7">)</span><span class="w">
+</span><span class="mi">0</span></code></pre>
   </section>
-</div>
-<div class="detail" id="subtract/2">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="subtract/2">
+    <div class="detail-header">
     <a href="#subtract/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">subtract(a, b)</span>
-    
-    
-    
+    <h1 class="signature">subtract(a, b)</span>
+        
       <div class="specs">
-        
-          <pre>subtract(<a href="#t:vector/0">vector</a>, <a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
-        
+          <pre>subtract(<a href="#t:vector/0">vector</a>(), <a href="#t:vector/0">vector</a>()) :: <a href="#t:vector/0">vector</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Subtract vector <em>B</em> from vector <em>A</em>.  Equivalent to <code class="inline">Vector.add(A, Vector.revers(B))</code></p>
+<p>Subtract vector <em>B</em> from vector <em>A</em>.  Equivalent to <code class="inline">Vector.add(A, Vector.revers(B))</code></p>
 <h2 id="subtract/2-examples" class="section-heading">
   <a href="#subtract/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.subtract({3, -4}, {2, 1})
-{1,-5}
-iex&gt; Vector.subtract({-2, 0, 5}, {-3, 1, 2})
-{1, -1, 3}</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">subtract</span><span class="p" data-group-id="5818013094-1">(</span><span class="p" data-group-id="5818013094-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p" data-group-id="5818013094-2">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="5818013094-3">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="5818013094-3">}</span><span class="p" data-group-id="5818013094-1">)</span><span class="w">
+</span><span class="p" data-group-id="5818013094-4">{</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p" data-group-id="5818013094-4">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">subtract</span><span class="p" data-group-id="5818013094-5">(</span><span class="p" data-group-id="5818013094-6">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="5818013094-6">}</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="5818013094-7">{</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="5818013094-7">}</span><span class="p" data-group-id="5818013094-5">)</span><span class="w">
+</span><span class="p" data-group-id="5818013094-8">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="5818013094-8">}</span></code></pre>
   </section>
-</div>
-<div class="detail" id="unit/1">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="unit/1">
+    <div class="detail-header">
     <a href="#unit/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">unit(v)</span>
-    
-    
-    
+    <h1 class="signature">unit(v)</span>
+        
       <div class="specs">
-        
-          <pre>unit(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
-        
+          <pre>unit(<a href="#t:vector/0">vector</a>()) :: <a href="#t:vector/0">vector</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Returns the unit vector parallel ot the given vector.
+<p>Returns the unit vector parallel ot the given vector.
 This will raise an <a href="https://hexdocs.pm/elixir/ArithmeticError.html"><code class="inline">ArithmeticError</code></a> if a zero-magnitude vector is given.
 Use <code class="inline">unit_safe</code> if there is a chance that a zero-magnitude vector
 will be sent.</p>
@@ -879,76 +681,62 @@ will be sent.</p>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.unit({3, 4})
-{0.6, 0.8}
-iex&gt; Vector.unit({8, 0, 6})
-{0.8, 0.0, 0.6}
-iex&gt; Vector.unit({-2, 0, 0})
-{-1.0, 0.0, 0.0}
-iex&gt; Vector.unit({0, 0, 0})
-** (ArithmeticError) bad argument in arithmetic expression</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">unit</span><span class="p" data-group-id="1596178733-1">(</span><span class="p" data-group-id="1596178733-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="1596178733-2">}</span><span class="p" data-group-id="1596178733-1">)</span><span class="w">
+</span><span class="p" data-group-id="1596178733-3">{</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p" data-group-id="1596178733-3">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">unit</span><span class="p" data-group-id="1596178733-4">(</span><span class="p" data-group-id="1596178733-5">{</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p" data-group-id="1596178733-5">}</span><span class="p" data-group-id="1596178733-4">)</span><span class="w">
+</span><span class="p" data-group-id="1596178733-6">{</span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p" data-group-id="1596178733-6">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">unit</span><span class="p" data-group-id="1596178733-7">(</span><span class="p" data-group-id="1596178733-8">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="1596178733-8">}</span><span class="p" data-group-id="1596178733-7">)</span><span class="w">
+</span><span class="p" data-group-id="1596178733-9">{</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p" data-group-id="1596178733-9">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">unit</span><span class="p" data-group-id="1596178733-10">(</span><span class="p" data-group-id="1596178733-11">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="1596178733-11">}</span><span class="p" data-group-id="1596178733-10">)</span><span class="w">
+</span><span class="gt">** (ArithmeticError) bad argument in arithmetic expression</span></code></pre>
   </section>
-</div>
-<div class="detail" id="unit_safe/1">
-  
-  
-  <div class="detail-header">
+</section>
+<section class="detail" id="unit_safe/1">
+    <div class="detail-header">
     <a href="#unit_safe/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">unit_safe(v)</span>
-    
-    
-    
+    <h1 class="signature">unit_safe(v)</span>
+        
       <div class="specs">
-        
-          <pre>unit_safe(<a href="#t:vector/0">vector</a>) :: <a href="#t:vector/0">vector</a></pre>
-        
+          <pre>unit_safe(<a href="#t:vector/0">vector</a>()) :: <a href="#t:vector/0">vector</a>()</pre>
       </div>
-    
   </div>
   <section class="docstring">
-    <p>Returns the unit vector parallel ot the given vector, but will handle
+<p>Returns the unit vector parallel ot the given vector, but will handle
 the vectors <code class="inline">{0, 0}</code>  and <code class="inline">{0, 0, 0}</code> by returning the same vector</p>
 <h2 id="unit_safe/1-examples" class="section-heading">
   <a href="#unit_safe/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Vector.unit_safe({3, 4})
-{0.6, 0.8}
-iex&gt; Vector.unit_safe({0, 0})
-{0, 0}
-iex&gt; Vector.unit_safe({0, 0, 0})
-{0, 0, 0}</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">unit_safe</span><span class="p" data-group-id="1127798428-1">(</span><span class="p" data-group-id="1127798428-2">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="1127798428-2">}</span><span class="p" data-group-id="1127798428-1">)</span><span class="w">
+</span><span class="p" data-group-id="1127798428-3">{</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p" data-group-id="1127798428-3">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">unit_safe</span><span class="p" data-group-id="1127798428-4">(</span><span class="p" data-group-id="1127798428-5">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="1127798428-5">}</span><span class="p" data-group-id="1127798428-4">)</span><span class="w">
+</span><span class="p" data-group-id="1127798428-6">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="1127798428-6">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Vector</span><span class="o">.</span><span class="n">unit_safe</span><span class="p" data-group-id="1127798428-7">(</span><span class="p" data-group-id="1127798428-8">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="1127798428-8">}</span><span class="p" data-group-id="1127798428-7">)</span><span class="w">
+</span><span class="p" data-group-id="1127798428-9">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="1127798428-9">}</span></code></pre>
   </section>
-</div>
-
+</section>
+          </div>
         </section>
-      
-
-      
           <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.3),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.19.3),
           </span>
           <span class="line">
             designed by
-            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
-        <button class="night-mode-toggle"><span class="sr-only">Switch theme</span></button>
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-da04b39d0c.js"></script>
   
   </body>
 </html>

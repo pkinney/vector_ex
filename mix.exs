@@ -3,7 +3,7 @@ defmodule Vector.Mixfile do
 
   def project do
     [app: :vector,
-     version: "1.0.0",
+     version: "1.0.1",
      elixir: "~> 1.2",
      description: description(),
      package: package(),
@@ -25,7 +25,7 @@ defmodule Vector.Mixfile do
   defp deps do
     [
       {:earmark, "~> 1.0", only: :dev},
-      {:ex_doc, "~> 0.16", only: :dev},
+      {:ex_doc, "~> 0.18", only: :dev},
       {:benchfella, "~> 0.3", only: :dev},
       {:excoveralls, "~> 0.4", only: :test},
       {:dialyxir, "~> 0.4", only: [:dev], runtime: false},
