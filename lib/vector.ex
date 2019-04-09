@@ -257,7 +257,7 @@ defmodule Vector do
   end
 
   @doc ~S"""
-  Compares two vectors for euqality, with an optional tolerance
+  Compares two vectors for equality, with an optional tolerance
 
   ## Examples
 
