@@ -9,7 +9,7 @@ Library of common vector functions for use in geometric or graphical calculation
 
 ```elixir
 defp deps do
-  [{:vector, "~> 0.3.0"}]
+  [{:vector, "~> 1.0"}]
 end
 ```
 
