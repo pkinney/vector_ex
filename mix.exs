@@ -45,6 +45,7 @@ defmodule Vector.Mixfile do
       licenses: ["MIT"],
       links: %{
         "GitHub" => @source_url,
+        "Docs" => "https://hexdocs.pm/vector/Vector.html"
       }
     ]
   end

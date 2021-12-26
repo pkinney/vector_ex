@@ -26,4 +26,6 @@ vector-*.tar
 /tmp/
 
 # Misc.
-/bench/
+.DS_Store
+.elixir_ls/
+/bench/snapshots/
