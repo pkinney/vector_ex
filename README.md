@@ -1,7 +1,8 @@
 # Vector Math Library for Elixir
 
-[![Build Status](https://travis-ci.org/pkinney/vector_ex.svg?branch=master)](https://travis-ci.org/pkinney/vector_ex)
+![Build Status](https://github.com/pkinney/vector_ex/actions/workflows/ci.yaml/badge.svg)
 [![Hex.pm](https://img.shields.io/hexpm/v/vector.svg)](https://hex.pm/packages/vector)
+[![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/vector)
 
 Library of common vector functions for use in geometric or graphical calculations.
 

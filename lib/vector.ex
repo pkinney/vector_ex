@@ -1,4 +1,3 @@
-
 defmodule Vector do
   @moduledoc ~S"""
   A library of two- and three-dimensional vector operations.  All vectors
@@ -34,10 +33,9 @@ defmodule Vector do
   def cross({x1, y1}, {x2, y2}), do: {0, 0, x1 * y2 - y1 * x2}
   def cross({x1, y1, z1}, {x2, y2}), do: cross({x1, y1, z1}, {x2, y2, 0})
   def cross({x1, y1}, {x2, y2, z2}), do: cross({x1, y1, 0}, {x2, y2, z2})
+
   def cross({x1, y1, z1}, {x2, y2, z2}) do
-    {y1 * z2 - z1 * y2,
-     z1 * x2 - x1 * z2,
-     x1 * y2 - y1 * x2}
+    {y1 * z2 - z1 * y2, z1 * x2 - x1 * z2, x1 * y2 - y1 * x2}
   end
 
   @doc ~S"""
@@ -56,6 +54,7 @@ defmodule Vector do
   """
   @spec cross_norm(vector, vector) :: number
   def cross_norm({x1, y1}, {x2, y2}), do: cross_norm({x1, y1, 0}, {x2, y2, 0})
+
   def cross_norm({x1, y1, z1}, {x2, y2, z2}) do
     norm(cross({x1, y1, z1}, {x2, y2, z2}))
   end
@@ -76,6 +75,7 @@ defmodule Vector do
   def dot({x1, y1}, {x2, y2}), do: dot({x1, y1, 0}, {x2, y2, 0})
   def dot({x1, y1, z1}, {x2, y2}), do: dot({x1, y1, z1}, {x2, y2, 0})
   def dot({x1, y1}, {x2, y2, z2}), do: dot({x1, y1, 0}, {x2, y2, z2})
+
   def dot({x1, y1, z1}, {x2, y2, z2}) do
     x1 * x2 + y1 * y2 + z1 * z2
   end
@@ -115,6 +115,7 @@ defmodule Vector do
   """
   @spec norm_squared(vector) :: number
   def norm_squared({x, y}), do: norm_squared({x, y, 0})
+
   def norm_squared({x, y, z}) do
     x * x + y * y + z * z
   end
