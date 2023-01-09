@@ -8,18 +8,18 @@ defmodule VectorIdentitiesTest do
              for(x <- @values, y <- @values, z <- @values, do: {x, y, z})
   @tolerance 0.00001
 
-  defp equal?(r1, r2) when is_tuple(r1) and is_tuple(r2), do: equal?(r1, r2, @tolerance)
-  defp equal?(r1, r2), do: abs(r1 - r2) <= @tolerance
+  defp are_equal?(r1, r2) when is_tuple(r1) and is_tuple(r2), do: equal?(r1, r2, @tolerance)
+  defp are_equal?(r1, r2), do: abs(r1 - r2) <= @tolerance
 
   def test_identity_2(left, right) do
-    for a <- @vectors, b <- @vectors, do: assert(equal?(left.(a, b), right.(a, b)))
+    for a <- @vectors, b <- @vectors, do: assert(are_equal?(left.(a, b), right.(a, b)))
   end
 
   def test_identity_3(left, right) do
     for a <- @vectors,
         b <- @vectors,
         c <- @vectors,
-        do: assert(equal?(left.(a, b, c), right.(a, b, c)))
+        do: assert(are_equal?(left.(a, b, c), right.(a, b, c)))
   end
 
   test "A + B = B + A" do
